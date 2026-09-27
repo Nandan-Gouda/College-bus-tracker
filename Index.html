@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>College Bus Tracker</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Leaflet Map -->
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+  />
+</head>
+
+<body>
+
+  <header>
+    <h1>🚌 College Bus Tracker</h1>
+    <p>Live bus location and estimated arrival time</p>
+  </header>
+
+  <main>
+
+    <section class="bus-info">
+
+      <div>
+        <h2>Bus KA-34-C-1024</h2>
+        <p>Route: Ballari → RYMEC Campus</p>
+      </div>
+
+      <div class="status">
+        🟢 LIVE
+      </div>
+
+    </section>
+
+    <section id="map"></section>
+
+    <section class="details">
+
+      <div class="card">
+        <span>Status</span>
+        <strong id="status">On Route</strong>
+      </div>
+
+      <div class="card">
+        <span>Speed</span>
+        <strong id="speed">32 km/h</strong>
+      </div>
+
+      <div class="card">
+        <span>Next Stop</span>
+        <strong id="nextStop">College Gate</strong>
+      </div>
+
+      <div class="card">
+        <span>ETA</span>
+        <strong id="eta">8 min</strong>
+      </div>
+
+    </section>
+
+    <section class="controls">
+
+      <button onclick="moveBus()">
+        Update Bus Location
+      </button>
+
+      <button onclick="resetBus()">
+        Reset
+      </button>
+
+    </section>
+
+    <section class="stops">
+
+      <h2>Route Stops</h2>
+
+      <div class="stop">
+        <span>1</span>
+        City Bus Stand
+      </div>
+
+      <div class="stop">
+        <span>2</span>
+        Main Road
+      </div>
+
+      <div class="stop">
+        <span>3</span>
+        College Gate
+      </div>
+
+      <div class="stop">
+        <span>4</span>
+        RYMEC Campus
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer>
+    College Bus GPS Tracking System
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="script.js"></script>
+
+</body>
+</html>
